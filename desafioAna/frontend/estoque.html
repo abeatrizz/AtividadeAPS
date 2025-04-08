@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de estoques</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Roupas</a>
+        <a href="estoque.html">Estoque</a>
+    </nav>
+
+    <h1>Estoque Cadastrados</h1>
+    <button id="addEstoqueBtn">Adicionar Estoque</button>
+
+    <table id="estoqueTable">
+        <thead>
+            <tr>
+                <th>Quantidade</th>
+                <th>Nome</th>
+                <th>Código</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os Estoques serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar estoque -->
+    <div id="estoqueModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleEstoque">Adicionar Estoque</h2>
+            <form id="estoqueForm">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required>
+
+                <label for="nameEstoque">Nome:</label>
+                <input type="text" id="nameEstoque" name="name" required>
+
+                <label for="codigo">Código:</label>
+                <select id="codigo" name="codigo" required>
+                    <!-- Os códigos serão carregados aqui via JS -->
+                </select>
+
+                <button type="submit" id="saveEstoqueBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/estoque.js"></script>
+</body>
+</html>

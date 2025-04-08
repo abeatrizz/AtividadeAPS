@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Roupas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Roupas</a>
+        <a href="estoque.html">Estoque</a>
+    </nav>
+
+    <h1>Roupas Cadastradas</h1>
+    <button id="addClothesBtn">Adicionar Roupa</button>
+
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>Código</th> 
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As roupas serão listados aqui via JS -->
+        </tbody>
+    </table>
+
+<!-- Modal para adicionar/editar Roupa -->
+<div id="clothesModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Adicionar Roupa</h2>
+        <form id="clothesForm">
+            <label for="code">Código:</label>
+            <input type="text" id="code" name="code" required>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="price">Valor:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+
+            <label for="type">Tipo:</label>
+            <select id="type" name="type" required>
+                <option value="calça">Camisa</option>
+                <option value="vestido">Calça</option>
+                <option value="blusa">Vestido</option>
+                <option value="acessório">Acessório</option>
+                <option value="acessório">Short</option>
+                <option value="acessório">Saia</option>
+            </select>
+            <button type="submit" id="saveClothesBtn">Salvar</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/roup.js"></script>
+</body>
+</html>
